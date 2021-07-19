@@ -1,0 +1,454 @@
+/* BreakPoint */
+
+/* Reset  */
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+p,
+ul {
+  padding: 0px;
+  margin: 0px;
+}
+
+body {
+  font-family: Georgia, serif;
+  color: #252525;
+}
+
+/* Menu  */
+
+.header {
+  background: #252525;
+  padding: 20px 0;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.container::after,
+.container::before {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+.logo {
+  display: block;
+  float: left;
+  margin-left: 10px;
+}
+
+.nav {
+  float: right;
+  margin-right: 10px;
+}
+
+.nav li {
+  display: inline-block;
+}
+
+.nav a {
+  display: block;
+  padding: 10px;
+  text-decoration: none;
+  color: white;
+  font-size: 1.125em;
+}
+
+@media (max-width: 739px) {
+  .header {
+    text-align: center;
+  }
+  a.logo {
+    float: none;
+    margin: 0 auto;
+  }
+  .nav {
+    float: none;
+    clear: both;
+  }
+
+  .nav a {
+    padding: 3px;
+    margin-top: 10px;
+  }
+}
+
+/* Intro */
+
+.main {
+  background: url("../img/bg-intro.jpg") no-repeat center center;
+  background-size: cover;
+  padding: 150px 0;
+  text-align: center;
+  color: white;
+}
+
+.main h1 {
+  text-transform: uppercase;
+  font-size: 3em;
+}
+
+.main h1::after {
+  content: "";
+  display: block;
+  width: 20px;
+  height: 4px;
+  background: #fff;
+  margin: 10px auto;
+}
+
+.main p {
+  font-style: italic;
+  font-size: 1.125em;
+}
+
+@media (max-width: 739px) {
+  .main {
+    padding: 60px 0;
+  }
+}
+
+/* Sobre */
+
+.sobre {
+  padding: 60px 0;
+}
+
+.sobre h2 {
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 60px;
+}
+
+.sobreItem {
+  width: 460px;
+  float: left;
+  margin: 0 10px;
+}
+
+.sobreItem img {
+  display: block;
+  max-width: 100%;
+}
+
+.sobreItem h3 {
+  font-size: 2.25em;
+  background: #252525;
+  width: 220px;
+  color: white;
+  line-height: 1em;
+  font-style: italic;
+  font-weight: normal;
+  text-align: center;
+  padding: 5px 0 10px 0;
+  top: -25px;
+  position: relative;
+}
+
+.sobre p {
+  font-size: 1.125em;
+  line-height: 1.4em;
+  font-style: italic;
+  text-align: center;
+  margin: 20px auto;
+  max-width: 460px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .container {
+    max-width: 720px;
+  }
+  .sobreItem {
+    width: 340px;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+  .sobreItem {
+    width: 300px;
+    margin: 0 auto;
+  }
+}
+
+/* Produtos */
+
+.produtos {
+  background: #e7e4d8;
+  padding: 60px 0;
+  border-top: 3px solid #d6d3c8;
+  border-bottom: 3px solid #d6d3c8;
+}
+
+.produtosItem {
+  width: 300px;
+  float: left;
+  margin: 0 10px 20px 10px;
+}
+
+.produtosItem h2 {
+  text-align: center;
+  font-size: 2.25em;
+  margin-bottom: 20px;
+}
+
+.produtosItem h2::before {
+  content: "";
+  display: block;
+  width: 100px;
+  height: 100px;
+  background: currentColor;
+  border-radius: 50%;
+  margin: 20px auto;
+  border: 5px solid #e7e4d8;
+  box-shadow: 0 0 0 10px currentColor;
+}
+
+.produtosItem p {
+  font-size: 0.875em;
+  line-height: 1.4em;
+}
+
+h2.produtosPaulista::before {
+  color: #492901;
+}
+
+h2.produtosCarioca::before {
+  color: #c17139;
+}
+
+h2.produtosMineiro::before {
+  color: #d7d54d;
+}
+
+.produtosBtn {
+  width: 180px;
+  border: 3px solid;
+  color: #252525;
+  text-decoration: none;
+  display: block;
+  font-size: 1.125em;
+  font-weight: bold;
+  text-transform: uppercase;
+  text-align: center;
+  padding: 15px 0;
+  margin: 20px auto 0 auto;
+}
+
+.produtosBtn:hover {
+  text-decoration: none;
+  color: #c17139;
+  border-color: #c17139;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .container {
+    max-width: 720px;
+  }
+  .produtosItem {
+    width: 220px;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+  .produtosItem {
+    margin: 0 auto 20px auto;
+  }
+}
+
+/* Locais */
+
+.locais {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 20px 0;
+}
+
+.locaisItem {
+  clear: both;
+  margin: 60px auto;
+}
+
+.locaisItem::after,
+.locaisItem::before {
+  display: table;
+  content: "";
+  clear: both;
+}
+
+.locaisItem img {
+  width: 460px;
+  float: left;
+  display: block;
+  margin: 0 10px;
+}
+
+.locaisItem > div {
+  width: 460px;
+  float: left;
+  margin: 0 10px;
+}
+
+.locaisItem h2 {
+  font-size: 2.25em;
+  margin-bottom: 20px;
+}
+
+.locaisItem p {
+  font-size: 1.125em;
+  line-height: 1.4em;
+  max-width: 320px;
+  margin-bottom: 40px;
+}
+
+.locaisItem a {
+  font-size: 1.125em;
+  text-transform: uppercase;
+  text-decoration: none;
+  border: 3px solid;
+  color: #252525;
+  padding: 10px 20px;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .locais {
+    max-width: 720px;
+  }
+  .locaisItem div,
+  .locaisItem img {
+    width: 340px;
+  }
+}
+
+@media (max-width: 739px) {
+  .locais {
+    max-width: 300px;
+  }
+  .locaisItem img,
+  .locaisItem div {
+    max-width: 300px;
+    margin: 0px;
+  }
+}
+
+/* Newsletter */
+
+.newsletter {
+  background: #e7e4d8;
+  padding: 30px 0;
+}
+
+.assine {
+  width: 460px;
+  margin: 0 10px;
+  float: left;
+}
+
+.assine h2 {
+  font-size: 2.25em;
+}
+
+.assine p {
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.newsletter form {
+  width: 460px;
+  margin: 10px 10px 0 10px;
+  float: left;
+}
+
+.newsletter form label {
+  display: none;
+}
+
+.newsletter form input {
+  width: 320px;
+  border: 3px solid #252525;
+  background: none;
+  font-size: 1.5em;
+  font-style: italic;
+  font-family: Georgia, serif;
+  padding: 10px;
+  float: left;
+}
+
+.newsletter form button {
+  background: #252525;
+  border: none;
+  font-family: Georgia, serif;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  width: 140px;
+  padding: 13px 0;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (min-width: 740px) and (max-width: 980px) {
+  .container {
+    max-width: 720px;
+  }
+  .assine {
+    width: 340px;
+  }
+  .newsletter form,
+  .newsletter input {
+    width: 340px;
+  }
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+  .assine {
+    width: 300px;
+  }
+  .newsletter form,
+  .newsletter input {
+    width: 300px;
+    margin: 10px 0 0 0;
+  }
+}
+
+/* Footer */
+
+.footer {
+  background: #d6d3c8;
+  padding: 40px;
+}
+
+.footer p {
+  float: left;
+  margin: 0 10px;
+  font-size: 1.125em;
+  line-height: 1.4em;
+}
+
+.footer img {
+  float: right;
+  margin: 0 10px;
+  display: block;
+}
+
+@media (max-width: 739px) {
+  .container {
+    max-width: 300px;
+  }
+}
